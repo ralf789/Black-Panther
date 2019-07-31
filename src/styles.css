@@ -1,0 +1,99 @@
+/*--------------------BASICS--------------------*/
+body {
+  background: url("https://i.redd.it/y98c8jdv3ai01.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/*--------------------CONTAINER--------------------*/
+#w-outer {
+  position: fixed;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: max-content;
+  height: 100vh;
+  display: table;
+}
+
+#w-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/*--------------------MIDDLE: CHARACTER IMAGE--------------------*/
+#mainchara {
+  margin-left: 25px;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 400px;
+  opacity: 1;
+}
+
+.render {
+  max-width: 250px;
+  height: inherit;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: #fff;
+  font-size: 30px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 3px solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3s steps(30, end),
+    blink-caret 0.5s step-end infinite;
+    opacity:0;
+  
+}
+
+/* The typing effect */
+@keyframes typing {
+  0% { width:  0; opacity:1}
+  100% { width: 100%; opacity: 1 }
+}
+  
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+  
+}
+/*demo end*/
+
+/* shake*/
+.bp:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+/*end shake*/
+
